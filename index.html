@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css" />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+  <body class="shower list">
+    <header class="caption">
+      <h1>Bootstrap 5</h1>
+    </header>
+
+    <section class="slide" id="cover">
+      <h2>Bootstrap 5</h2>
+      <p>Что нового?</p>
+      <div class="img"></div>
+      <style>
+        #cover {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        #cover .img {
+          opacity: 0.3;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(pictures/bootstrap.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          filter: blur(1px);
+        }
+        #cover h2 {
+          margin: 0;
+          position: relative;
+          z-index: 2;
+          color: black;
+          text-align: center;
+          font-size: 80px;
+          font-weight: 700;
+        }
+
+        #cover p {
+          margin: 10px 0 0;
+          position: relative;
+          z-index: 2;
+          text-align: center;
+          color: black;
+          font-size: 32px;
+        }
+        .slide {
+          padding-top: 30px !important;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="scale">
+      <img src="pictures/Jq.png" alt="" />
+      <h3>Отказ от JQuery как от основной зависимости</h3>
+      <p>
+        Но при желании его можно использовать, если Bootstrap обнаружит jQuery в
+        объекте window
+      </p>
+      <p>Dropdowns, popovers, tooltips - все еще зависят от popper.js</p>
+      <style>
+        #scale img {
+          display: block;
+          margin: 0 auto;
+          width: 90%;
+        }
+        #scale h3 {
+          text-align: center;
+        }
+        #scale p {
+          font-size: 20px;
+          line-height: 1.2;
+          margin-bottom: 8px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="users">
+      <img src="pictures/bootstrap5_IE.jpg" alt="" />
+      <h3>Прекращена поддержка Internet Explorer</h3>
+
+      <style>
+        #users img {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+        }
+        #users h3 {
+          text-align: center;
+          font-size: 30px;
+          margin-bottom: 16px;
+        }
+        #users ul {
+          height: 128px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="why">
+      <img src="pictures/css_vars.png" alt="" />
+      <h3>Переход на CSS переменные</h3>
+      <ul>
+        <li>CSS переменные предлагают гибкость, аналогичную переменным Sass</li>
+        <li>Нет необходимости компиляции перед передачей в браузер</li>
+        <li>Меньший размер скомпилированных файлов</li>
+      </ul>
+      <style>
+        #why img {
+          display: block;
+          width: 60%;
+          margin: 0 auto;
+        }
+        #why h3 {
+          text-align: center;
+          line-height: 1.2;
+          margin-top: 8px;
+          margin-bottom: 16px;
+        }
+        #why p {
+          margin-bottom: 0;
+        }
+        #why ul li {
+          font-size: 18px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="alternative">
+      <h3>Другие доработки</h3>
+      <div class="columns two">
+        <div>
+          <img src="pictures/grid.png" alt="" />
+          <p>Добавлен breakepoint XXL</p>
+        </div>
+        <div>
+          <img src="pictures/utilites.png" alt="" />
+          <p>
+            Добавлен API утилит, что позволит создавать свои служебные классы
+          </p>
+        </div>
+      </div>
+      <style>
+        #alternative {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        #alternative div {
+          font-size: 14px;
+        }
+        #alternative img {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+        }
+        #alternative h3,
+        #alternative p {
+          text-align: center;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="alternative">
+      <div class="columns two">
+        <div>
+          <img src="pictures/gutters.png" alt="" />
+          <p>Добавлена утилита .g- Gutters</p>
+        </div>
+        <div>
+          <img src="pictures/icons.png" alt="" />
+          <p>Добавлены новые иконки</p>
+          <i class="bi bi-alarm"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="why">
+      <h3>RTL</h3>
+      <img src="pictures/rtl.png" alt="" />
+      <p>Эксперементальная функция</p>
+      <ul>
+        <li>Установите dir="rtl" в элементе &#60;html&#62;</li>
+        <li>
+          Добавьте соответствующий атрибут lang, например lang="ar" в элемент
+          &#60;html&#62;
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="rfs">
+      <div class="slide-aria">
+        <h4>RFS (Responsive font size)</h4>
+      </div>
+      <div class="columns two">
+        <div>
+          <img src="/pictures/rfs.gif" alt="" />
+          <img src="/pictures/rfs-code.png" alt="" />
+        </div>
+        <div>
+          <img src="/pictures/rfs.svg" alt="" />
+        </div>
+      </div>
+      <style>
+        #rfs code {
+          font-size: 14px;
+        }
+        #rfs img {
+          display: block;
+          width: 100%;
+        }
+        #rfs h4 {
+          margin-top: 0;
+        }
+        #rfs .columns {
+          grid-column-gap: 40px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="other">
+      <h4>Еще немного нововведений</h4>
+      <ul>
+        <li>Плавная прокрутка по якорям</li>
+        <li>
+          <div>
+            <p>Интеграция с библиотекой Masonry</p>
+            <span
+              >By adding data-masonry='{"percentPosition": true }' to the .row
+              wrapper</span
+            >
+          </div>
+          <img src="/pictures/masonry.png" alt="" />
+        </li>
+        <li>Отступы и шрифты перешли с px на rem</li>
+        <li>
+          Замена классов горизонтального направления Left и Right на Start и End
+        </li>
+        <li>Управление колонками в строке - row-cols-md-3</li>
+        <li>Удалено свойство position: relative для .col-</li>
+        <li>Перешли с Jekyll на Hugo</li>
+      </ul>
+      <style>
+        #other h4 {
+          margin-top: 0;
+        }
+        #other img {
+          width: 200px;
+        }
+        #other li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 16px;
+        }
+      </style>
+    </section>
+    <section class="slide" id="end">
+      <h2>Спасибо!</h2>
+      <style>
+        #end {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      </style>
+    </section>
+
+    <footer class="badge">
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+  </body>
+</html>
