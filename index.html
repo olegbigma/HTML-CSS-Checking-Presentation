@@ -13,12 +13,11 @@
   </head>
   <body class="shower list">
     <header class="caption">
-      <h1>Bootstrap 5</h1>
+      <h1>Критерии качества верстки</h1>
     </header>
 
     <section class="slide" id="cover">
-      <h2>Bootstrap 5</h2>
-      <p>Что нового?</p>
+      <h2>Критерии качества верстки</h2>
       <div class="img"></div>
       <style>
         #cover {
@@ -36,7 +35,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-image: url(pictures/bootstrap.png);
+          background-image: url(pictures/pic1.jpg);
           background-repeat: no-repeat;
           background-size: cover;
           filter: blur(1px);
@@ -65,19 +64,52 @@
       </style>
     </section>
 
-    <section class="slide" id="scale">
-      <img src="pictures/Jq.png" alt="" />
-      <h3>Отказ от JQuery как от основной зависимости</h3>
+    <section class="slide" id="design">
+      <img class="pic" src="pictures/pic7.jpg" alt="" />
+      <h3>Соответствие дизайну</h3>
       <p>
-        Но при желании его можно использовать, если Bootstrap обнаружит jQuery в
-        объекте window
+        Верстка должна соответствовать дизайну
       </p>
-      <p>Dropdowns, popovers, tooltips - все еще зависят от popper.js</p>
       <style>
-        #scale img {
+        #design .pic {
           display: block;
           margin: 0 auto;
-          width: 90%;
+          width: 50%;
+        }
+        #design h3 {
+          text-align: center;
+        }
+        #design p {
+          font-size: 20px;
+          line-height: 1.2;
+          margin-bottom: 8px;
+          text-align: center;
+        }
+        #design .d-flex {
+          display: flex;
+        }
+        #design .browsstack {
+          width: 100px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="scale">
+      <img class="pic" src="pictures/pic2.jpg" alt="" />
+      <h3>Кроссбраузерность</h3>
+      <p>
+        Пользователи сайта могут использовать разные браузеры в разных системах, поэтому нужно добиваться единого отображения.
+      </p>
+      <p>Вёрстка должна идентично отображаться в последних стабильных версиях браузеров Chrome, Firefox, Safari, если иное не указано в техзадании проекта.</p>
+      <div class="d-flex">
+        <p><a target="blank" href="https://www.browserstack.com/">Browserstack</a> - может помочь</p>
+        <img class="browsstack" src="pictures/pic3.png" alt="">
+      </div>
+      <style>
+        #scale .pic {
+          display: block;
+          margin: 0 auto;
+          width: 70%;
         }
         #scale h3 {
           text-align: center;
@@ -87,37 +119,47 @@
           line-height: 1.2;
           margin-bottom: 8px;
         }
+        #scale .d-flex {
+          display: flex;
+        }
+        #scale .browsstack {
+          width: 100px;
+        }
       </style>
     </section>
 
     <section class="slide" id="users">
-      <img src="pictures/bootstrap5_IE.jpg" alt="" />
-      <h3>Прекращена поддержка Internet Explorer</h3>
-
+      <img src="pictures/pic4.png" alt="" />
+      <h3>Адаптивность</h3>
+      <p>Верстка должна выглядеть не сломанной на всех основных разрешениях, начиная с 320px.</p>
       <style>
         #users img {
           display: block;
-          width: 80%;
+          width: 60%;
           margin: 0 auto;
         }
         #users h3 {
           text-align: center;
           font-size: 30px;
+          margin-top: 16px;
           margin-bottom: 16px;
         }
         #users ul {
           height: 128px;
         }
+        #users p {
+          text-align: center;
+          font-size: 16px;
+        }
       </style>
     </section>
 
     <section class="slide" id="why">
-      <img src="pictures/css_vars.png" alt="" />
-      <h3>Переход на CSS переменные</h3>
+      <img src="pictures/pic5.png" alt="" />
+      <h3>Валидность</h3>
       <ul>
-        <li>CSS переменные предлагают гибкость, аналогичную переменным Sass</li>
-        <li>Нет необходимости компиляции перед передачей в браузер</li>
-        <li>Меньший размер скомпилированных файлов</li>
+        <li>Разметка должна проходить валидацию в валидаторе <a target="blank" href="https://www.w3.org/">W3C</a> без ошибок (error).</li>
+        <li>В проверке могут быть предупреждения (warning).</li>
       </ul>
       <style>
         #why img {
@@ -141,29 +183,27 @@
     </section>
 
     <section class="slide" id="alternative">
-      <h3>Другие доработки</h3>
+      <h3>Оптимизированность</h3>
       <div class="columns two">
         <div>
-          <img src="pictures/grid.png" alt="" />
-          <p>Добавлен breakepoint XXL</p>
+          <img src="pictures/pic6.png" alt="" />
         </div>
         <div>
-          <img src="pictures/utilites.png" alt="" />
-          <p>
-            Добавлен API утилит, что позволит создавать свои служебные классы
-          </p>
+          <ul>
+            <li>Выполнены базовые оптимизации Lighthouse(PageSpeed)</li>
+            <li>На всех страницах для контентных изображений используется ленивая загрузка изображений</li>
+            <li>Используются оптимальные форматы изображений и шрифтов</li>
+            <li>Стили и скрипты минимизированы</li>
+          </ul>
         </div>
       </div>
       <style>
         #alternative {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          padding-left: 60px;
-          padding-right: 60px;
         }
         #alternative div {
-          font-size: 14px;
+          font-size: 16px;
         }
         #alternative img {
           display: block;
@@ -177,91 +217,70 @@
       </style>
     </section>
 
-    <section class="slide" id="alternative">
+    <section class="slide" id="access">
       <div class="columns two">
+        <img src="pictures/pic8.jpeg" alt="" />
         <div>
-          <img src="pictures/gutters.png" alt="" />
-          <p>Добавлена утилита .g- Gutters</p>
-        </div>
-        <div>
-          <img src="pictures/icons.png" alt="" />
-          <p>Добавлены новые иконки</p>
-          <i class="bi bi-alarm"></i>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide" id="why">
-      <h3>RTL</h3>
-      <img src="pictures/rtl.png" alt="" />
-      <p>Эксперементальная функция</p>
-      <ul>
-        <li>Установите dir="rtl" в элементе &#60;html&#62;</li>
-        <li>
-          Добавьте соответствующий атрибут lang, например lang="ar" в элемент
-          &#60;html&#62;
-        </li>
-      </ul>
-    </section>
-
-    <section class="slide" id="rfs">
-      <div class="slide-aria">
-        <h4>RFS (Responsive font size)</h4>
-      </div>
-      <div class="columns two">
-        <div>
-          <img src="/pictures/rfs.gif" alt="" />
-          <img src="/pictures/rfs-code.png" alt="" />
-        </div>
-        <div>
-          <img src="/pictures/rfs.svg" alt="" />
+          <h3>Accessibility</h3>
+          <p>Как проверить верстку на доступность?</p>
+          <ul>
+            <li>Заполнен alt для изображений, если изображение декоративное - оно должно быть скрыто<li>
+            <li>
+              Все кликабельные элементы должны фокусироватся по табу.
+            </li>
+            <li>Контрастность основных элементов должна быть не меньше 3:1.</li>
+            <li>Скринридер должен правильно понимать и читать все основные разделы и элементы на странице.</li>
+          </ul>
         </div>
       </div>
       <style>
-        #rfs code {
-          font-size: 14px;
+        #access ul, p {
+          font-size: 16px;
         }
-        #rfs img {
+        #access p {
+          font-weight: 700;
+        }
+        #access img {
           display: block;
           width: 100%;
         }
-        #rfs h4 {
+        #access h3 {
           margin-top: 0;
         }
-        #rfs .columns {
-          grid-column-gap: 40px;
+        #access ul li {
+          margin-bottom: 16px;
+        }
+      </style>
+    </section>
+
+    <section class="slide" id="bem">
+      <h1>Используется методология БЭМ</h1>
+      <img src="pictures/pic7.png" alt="" />
+      <style>
+        #bem img {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+        }
+        #bem h1 {
+          text-align: center;
         }
       </style>
     </section>
 
     <section class="slide" id="other">
-      <h4>Еще немного нововведений</h4>
+      <h4>Именование классов</h4>
       <ul>
-        <li>Плавная прокрутка по якорям</li>
+        <li>Никакого транслита</li>
+        <li>Отсутствие граматических ошибок</li>
         <li>
-          <div>
-            <p>Интеграция с библиотекой Masonry</p>
-            <span
-              >By adding data-masonry='{"percentPosition": true }' to the .row
-              wrapper</span
-            >
-          </div>
-          <img src="/pictures/masonry.png" alt="" />
+          Логически подходящие названия классов
         </li>
-        <li>Отступы и шрифты перешли с px на rem</li>
-        <li>
-          Замена классов горизонтального направления Left и Right на Start и End
-        </li>
-        <li>Управление колонками в строке - row-cols-md-3</li>
-        <li>Удалено свойство position: relative для .col-</li>
-        <li>Перешли с Jekyll на Hugo</li>
       </ul>
+      <img src="pictures/pic10.png" alt="" />
       <style>
         #other h4 {
           margin-top: 0;
-        }
-        #other img {
-          width: 200px;
         }
         #other li {
           display: flex;
@@ -271,6 +290,39 @@
         }
       </style>
     </section>
+
+    <section class="slide" id="access">
+      <h3>Переполнение</h3>
+      <div class="columns two">
+        <div>
+          <ul>
+            <li>Текст должен оставаться в рамках родительского блока при переполнении<li>
+            <li>
+              Текст не должен смещать другие блоки.
+            </li>
+            <li>Родительский блок должен сохранять минимальные размеры при недополнении.</li>
+          </ul>
+          <ul>
+            <li>При увеличении количества элементов они должны оставаться в рамках родительского блока.<li>
+            <li>Слова, длиннее ширины родительского блока, должны переноситься.</li>
+          </ul>
+        </div>
+        <img src="pictures/pic9.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="slide" id="access">
+      <h3>И еще немного </h3>
+      <ul>
+        <li>В проекте не должно быть закоментированных фрагментов кода без осмысленного текстового пояснения.<li>
+        <li>
+          В проекте не должно быть неиспользуемых файлов.
+        </li>
+        <li>В разметке не должно быть лишних обёрток и элементов, которые используются для оформления и могут быть заменены на псевдоэлементы.</li>
+        <li>Файлы стилей должны быть разделены согласно структуры проекта.</li>
+      </ul>
+    </section>
+
     <section class="slide" id="end">
       <h2>Спасибо!</h2>
       <style>
