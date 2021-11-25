@@ -15,7 +15,6 @@
     <header class="caption">
       <h1>Критерии качества верстки</h1>
     </header>
-
     <section class="slide" id="cover">
       <h2>Критерии качества верстки</h2>
       <div class="img"></div>
@@ -219,23 +218,31 @@
 
     <section class="slide" id="access">
       <div class="columns two">
-        <img src="pictures/pic8.jpeg" alt="" />
+        <div class="space-around">
+          <img src="pictures/pic8.jpeg" alt="" />
+          <img src="pictures/pic-access.png" alt="" />
+        </div>
         <div>
           <h3>Accessibility</h3>
           <p>Как проверить верстку на доступность?</p>
           <ul>
-            <li>Заполнен alt для изображений, если изображение декоративное - оно должно быть скрыто<li>
+            <li>Заполнен alt для изображений, если изображение декоративное - оно должно быть скрыто от скринридеров с помощью aria-hidden="true".<li>
             <li>
-              Все кликабельные элементы должны фокусироватся по табу.
+              Все кликабельные элементы должны фокусироваться по табу.
             </li>
-            <li>Контрастность основных элементов должна быть не меньше 3:1.</li>
+            <li>Контрастность основных элементов должна быть не меньше 3:1. Соотношение контрастности текстовых элементов можно проверить с помощью браузерного инспектора. Остальные UI элементы можно проверить на специальных ресурсах типа <a href="https://www.seochecker.it/color-contrast-checker">seochecker.it</a> введя значение цвета Foreground и Background.</li>
             <li>Скринридер должен правильно понимать и читать все основные разделы и элементы на странице.</li>
           </ul>
         </div>
       </div>
       <style>
         #access ul, p {
-          font-size: 16px;
+          font-size: 14px;
+        }
+        #access .space-around {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
         }
         #access p {
           font-weight: 700;
@@ -246,6 +253,7 @@
         }
         #access h3 {
           margin-top: 0;
+          margin-bottom: 0;
         }
         #access ul li {
           margin-bottom: 16px;
@@ -304,7 +312,7 @@
           </ul>
           <ul>
             <li>При увеличении количества элементов они должны оставаться в рамках родительского блока.<li>
-            <li>Слова, длиннее ширины родительского блока, должны переноситься.</li>
+            <li>Слова, длиннее ширины родительского блока, должны переноситься или заканчиваться троеточием...</li>
           </ul>
         </div>
         <img src="pictures/pic9.jpg" alt="" />
